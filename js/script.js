@@ -5,6 +5,7 @@ const slidesData = [
         title: 'Rizal Park',
         description: 'Historic urban park in Manila featuring gardens, monuments, and open spaces.',
         location: 'Rizal Park, Manila, Philippines',
+        guide: 'Rizal Park is a must-visit historical site in Manila. Explore the famous Rizal Monument, take a walk through the gardens, and enjoy a relaxing afternoon by the fountains. It is a great place for picnics and historical sightseeing.',
         relatedImages: [
             'img/rizalpark1.jpg',
             'img/rizalpark.jpg',
@@ -18,6 +19,7 @@ const slidesData = [
         title: 'Intramuros',
         description: 'The historic walled area within Manila, showcasing Spanish colonial architecture.',
         location: 'Intramuros, Manila, Philippines',
+        guide: 'Intramuros is the heart of Manila’s history. Walk through cobblestone streets, visit Fort Santiago, explore the historic churches, and take a guided tour on a bamboo bike. Don’t miss the San Agustin Church and Casa Manila.',
         relatedImages: [
             'img/intra.jpg',
             'img/intra1.jpg',
@@ -27,27 +29,28 @@ const slidesData = [
             'img/intra5.jpg',
             'img/intra7.jpg',
             'img/intra8.jpg'
-            
         ]
     },
     {
-        image: 'img/fort2.jpg', 
+        image: 'img/fort2.jpg',
         title: 'Fort Santiago',
         description: 'A citadel built by the Spanish, part of the historic Intramuros.',
-        location: 'Manila, Philippines',
+        location: 'Intramuros, Manila, Philippines',
+        guide: 'Fort Santiago is one of the most significant historical sites in Manila. Visit the Rizal Shrine, explore the dungeons, and walk along the walls of the fort for a glimpse of Manila’s colonial past.',
         relatedImages: [
             'img/fort1.jpg',
             'img/fort3.jpg',
             'img/fort4.jpg',
             'img/fort5.jpg',
-            'img/fort6.jpg'    
+            'img/fort6.jpg'
         ]
     },
     {
         image: 'img/bay3f.jpg',
         title: 'Manila Baywalk',
         description: 'Famous boulevard overlooking Manila Bay, known for its spectacular sunsets.',
-        location: 'Manila, Philippines',
+        location: 'Roxas Boulevard, Manila, Philippines',
+        guide: 'The Manila Baywalk is the perfect spot for a relaxing evening stroll. Enjoy the stunning sunset views, try delicious street food, and listen to live music performances along the promenade.',
         relatedImages: [
             'img/bay.jpg',
             'img/bay1.jpg',
@@ -58,19 +61,21 @@ const slidesData = [
         image: 'img/fine.jpg',
         title: 'National Museum of Fine Arts',
         description: 'Home to a vast collection of Filipino art, including works by national artists.',
-        location: 'Manila, Philippines',
+        location: 'Padre Burgos Ave, Ermita, Manila, Philippines',
+        guide: 'Art lovers should not miss the National Museum of Fine Arts. Admire masterpieces from Filipino artists, including Juan Luna’s famous painting, "Spoliarium." Admission is free, making it a great cultural stop in Manila.',
         relatedImages: [
             'img/fine1.jpg',
             'img/fine2.jpg',
             'img/fine3.jpg',
-            'img/fine4.jpg'    
+            'img/fine4.jpg'
         ]
     },
     {
         image: 'img/san.jpg',
         title: 'San Agustin Church',
         description: 'The oldest stone church in the Philippines, a UNESCO World Heritage Site.',
-        location: 'Manila, Philippines',
+        location: 'Intramuros, Manila, Philippines',
+        guide: 'Visit the breathtaking San Agustin Church, the oldest stone church in the Philippines. Marvel at its Baroque architecture, beautiful ceiling paintings, and the adjacent museum filled with religious artifacts.',
         relatedImages: [
             'img/san1.jpg',
             'img/san2.jpg',
@@ -81,7 +86,8 @@ const slidesData = [
         image: 'img/ocean.jpg',
         title: 'Manila Ocean Park',
         description: 'An oceanarium and marine-themed park offering interactive exhibits.',
-        location: 'Manila, Philippines',
+        location: 'Rizal Park, Manila, Philippines',
+        guide: 'Perfect for families and marine enthusiasts, Manila Ocean Park offers exciting attractions such as the Oceanarium, Sea Lion Show, and interactive touch pools. It’s a fun and educational experience for all ages.',
         relatedImages: [
             'img/ocean1.jpg',
             'img/ocean2.jpg',
@@ -93,7 +99,8 @@ const slidesData = [
         image: 'img/sm.jpg',
         title: 'SM Mall of Asia',
         description: 'One of the largest malls in the world, featuring shopping, dining, and entertainment.',
-        location: 'Manila, Philippines',
+        location: 'Pasay City, Metro Manila, Philippines',
+        guide: 'SM Mall of Asia is a shopping paradise with countless retail stores, restaurants, and entertainment options. Enjoy the famous SM By the Bay, where you can ride the MOA Eye Ferris wheel and experience fun activities along the waterfront.',
         relatedImages: [
             'img/sm1.jpg',
             'img/sm2.jpg',
@@ -105,7 +112,8 @@ const slidesData = [
         image: 'img/Binondo.jpg',
         title: 'Binondo',
         description: 'The oldest Chinatown in the world, known for its rich culture and delicious food.',
-        location: 'Manila, Philippines',
+        location: 'Binondo, Manila, Philippines',
+        guide: 'Binondo is a food lover’s paradise. Take a food tour and try authentic Chinese dishes such as dumplings, noodle soups, and hopia. Visit the Binondo Church and explore the lively streets filled with traditional shops and markets.',
         relatedImages: [
             'img/Binondo1.jpg',
             'img/Binondo2.jpg',
@@ -116,7 +124,6 @@ const slidesData = [
         ]
     }
 ];
-
 // Initialize slider elements
 const slider = document.querySelector('.slider');
 const prevBtn = document.querySelector('.prev');
