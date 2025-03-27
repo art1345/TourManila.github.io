@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TourManila</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/theme.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/gallery.css">
+</head>
+<body class="attractions-page">
+    <header>
+        <h1>TourManila</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="attractions" class="attractions-section">
+            <div class="container">
+                <h2>Featured Locations</h2>
+        
+        <div class="slider-container">
+            <div class="slider">
+                <!-- Slides will be added by JavaScript -->
+            </div>
+            <button class="slider-btn prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img id="modal-image" src="" alt="">
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <div class="location-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="modal-location"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-gallery">
+        <h3>More Views</h3>
+        <div class="gallery-container"></div>
+    </div>
+
+        </section>
+        
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Email: info@tourmanila.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TourManila. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

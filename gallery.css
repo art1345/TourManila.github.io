@@ -1,0 +1,57 @@
+/* Enlarged View Styles */
+.enlarged-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(37, 32, 32, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.enlarged-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.enlarged-content img {
+    max-height: 90vh;
+    max-width: 90vw;
+    object-fit: contain;
+}
+
+.close-enlarged {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.5);
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-enlarged:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.1);
+}
+
+/* Click anywhere to close */
+.enlarged-view {
+    cursor: pointer;
+}
+
+.enlarged-content {
+    cursor: auto;
+}
