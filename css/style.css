@@ -654,3 +654,8 @@ h2 {
         height: 200px;
     }
 }
+
+.container p {
+    font-size: 10px; 
+}
+
