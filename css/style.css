@@ -653,4 +653,18 @@
      .modal-header img {
          height: 200px;
      }
+
+   .nav {
+         height: 300px;
+     }
+
+   .nav ul {
+     display: flex;
+     list-style: none;
+     gap: 1rem;
+     margin: 0;
+     padding: 0;
+     justify-content: center; /* Center the navigation items */
+ 
+ }
  }
