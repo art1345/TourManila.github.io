@@ -8,55 +8,166 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafcff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #182424;
+            color: rgb(45, 28, 28);
+            padding: 1%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navigation Styles */
+        nav {
+            position: fixed; /* Fixed position for sidebar */
+            top: 0;
+            left: -250px; /* Hide sidebar off-screen */
+            width: 250px; /* Width of the sidebar */
+            height: 100%; /* Full height */
+            background-color: #182424; /* Sidebar background color */
+            transition: left 0.3s ease; /* Smooth transition for sidebar */
+            z-index: 200; /* Ensure sidebar is above other content */
+            padding: 1rem;
+        }
+
+        nav.active {
+            left: 0; /* Show sidebar when active */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: flex-start; /* Align items to the start */
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #152a31;
+        }
+
+        /* Main content styles */
+        main {
+            margin-left: 0; /* Adjust margin for main content */
+            transition: margin-left 0.3s ease; /* Smooth transition for main content */
+            padding: 20px; /* Add padding for main content */
+        }
+
+        /* Button to toggle sidebar */
+        .toggle-button {
+            background-color: #182424;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 300; /* Ensure button is above other content */
+        }
+
+        /* Hero section styles */
+        .hero {
+            padding: 20px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px;
+                text-align: left; /* Align text to the left in sidebar */
+            }
+
+            nav ul {
+                gap: 0.5rem; /* Space between items */
+            }
+
+            nav a {
+                font-size: 1rem; /* Slightly smaller text on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                gap: 0.3rem; /* Space between items */
+            }
+
+            nav a {
+                font-size: 0.9rem; /* Smaller text for compact screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>TourManila</h1>
-        <nav>
-            <ul>|
-                <li><a href="index.html">Home</a></li>|
-                <li><a href="attractions.html">Attractions</a></li>|
-                <li><a href="about.html">About</a></li>|
-                <li><a href="contact.html">Contact</a></li>|
-            </ul>
-        </nav>
+        <button class="toggle-button">Menu</button> <!-- Button to toggle sidebar -->
     </header>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
     <main>
-        
-<section class="hero">
-<div class="container">
-        <h1>About Our Tour Guide Service</h1>
-        <p><strong>Welcome to Tour Manila!</strong> Our website serves as a digital guide to Manila’s most iconic attractions, offering <span class="highlight">free tourist spot recommendations</span> and <span class="highlight">virtual tours</span>.</p>
+        <section class="hero">
+            <div class="container">
+                <h1>About Our Tour Guide Service</h1>
+                <p><strong>Welcome to Tour Manila!</strong> Our website serves as a digital guide to Manila’s most iconic attractions, offering <span class="highlight">free tourist spot recommendations</span> and <span class="highlight">virtual tours</span>.</p>
 
-        <h2>Our Mission</h2>
-        <p>We aim to showcase the <strong>beauty, culture, and history</strong> of Manila, helping both local and international travelers explore must-visit locations like <strong>Rizal Park, Fort Santiago, National Museum of Fine Arts, and Manila Ocean Park</strong>.</p>
+                <h2>Our Mission</h2>
+                <p>We aim to showcase the <strong>beauty, culture, and history</strong> of Manila, helping both local and international travelers explore must-visit locations like <strong>Rizal Park, Fort Santiago, National Museum of Fine Arts, and Manila Ocean Park</strong>.</p>
 
-        <h2>Who is this for?</h2>
-        <p>Our platform is perfect for:</p>
-        <ul>
-            <li><strong>Foreign tourists & newcomers</strong> – Visitors exploring Manila for the first time.</li>
-            <li><strong>Local travelers</strong> – Filipinos looking for exciting places to visit.</li>
-            <li><strong>Ages 16+</strong> – Anyone interested in <strong>culture, travel, and history</strong>.</li>
-        </ul>
+                <h2>Who is this for?</h2>
+                <p>Our platform is perfect for:</p>
+                <ul>
+                    <li><strong>Foreign tourists & newcomers</strong> – Visitors exploring Manila for the first time.</li>
+                    <li><strong>Local travelers</strong> – Filipinos looking for exciting places to visit.</li>
+                    <li><strong>Ages 16+</strong> – Anyone interested in <strong>culture, travel, and history</strong>.</li>
+                </ul>
 
-        <h2>Why Choose Us?</h2>
-        <p>We help visitors:</p>
-        <ul>
-            <li><strong>Plan their trip easily</strong> by exploring attractions online.</li>
-            <li><strong>Discover hidden gems</strong> with expert recommendations.</li>
-            <li><strong>Experience Manila</strong> with engaging virtual tours and travel tips.</li>
-        </ul>
+                <h2>Why Choose Us?</h2>
+                <p>We help visitors:</p>
+                <ul>
+                    <li><strong>Plan their trip easily</strong> by exploring attractions online.</li>
+                    <li><strong>Discover hidden gems</strong> with expert recommendations.</li>
+                    <li><strong>Experience Manila</strong> with engaging virtual tours and travel tips.</li>
+                </ul>
 
-        <p>Let us be your guide to exploring the wonders of <strong>Manila!</strong> 🌍✨</p>
-            <p>We provide the best virtual tours of Manila's top attractions. Our mission is to showcase the beauty and culture of the Philippines' capital city.</p>
+                <p>Let us be your guide to exploring the wonders of <strong>Manila!</strong> 🌍✨</p>
+                <p>We provide the best virtual tours of Manila's top attractions. Our mission is to showcase the beauty and culture of the Philippines' capital city.</p>
                 <p>Founded in 2025, our team of local experts brings you authentic experiences from the heart of Manila.</p>
-                
-</div>
-</section>
+            </div>
+        </section>
     </main>
-
-    
 
     <footer>
         <div class="container">
@@ -64,6 +175,13 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+        const sidebar = document.querySelector('nav.sidebar');
+        const toggleButton = document.querySelector('.toggle-button');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
