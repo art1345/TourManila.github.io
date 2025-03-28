@@ -10,8 +10,33 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/gallery.css">
     <style>
+        /* Base styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafcff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
- /* Navigation Styles */
+        /* Header Styles */
+        header {
+            background-color: #182424;
+            color: rgb(45, 28, 28);
+            padding: 1%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navigation Styles */
         nav {
             position: fixed; /* Fixed position for sidebar */
             top: 0;
@@ -25,7 +50,7 @@
         }
 
         nav.active {
-            right: 0; /* Show sidebar when active */
+            left: 0; /* Show sidebar when active */
         }
 
         nav ul {
