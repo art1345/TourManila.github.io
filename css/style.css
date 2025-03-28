@@ -7,7 +7,7 @@ body {
     line-height: 1.6;
     display: flex;
     overflow: hidden;
-    flex-direction: column;
+    flex-direction: roll;
 }
 
 /* Header Styles */
