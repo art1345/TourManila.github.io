@@ -9,19 +9,134 @@
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafcff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #182424;
+            color: rgb(45, 28, 28);
+            padding: 1%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navigation Styles */
+        nav {
+            position: fixed; /* Fixed position for sidebar */
+            top: 0;
+            left: -250px; /* Hide sidebar off-screen */
+            width: 250px; /* Width of the sidebar */
+            height: 100%; /* Full height */
+            background-color: #182424; /* Sidebar background color */
+            transition: left 0.3s ease; /* Smooth transition for sidebar */
+            z-index: 200; /* Ensure sidebar is above other content */
+            padding: 1rem;
+        }
+
+        nav.active {
+            left: 0; /* Show sidebar when active */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: flex-start; /* Align items to the start */
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #152a31;
+        }
+
+        /* Main content styles */
+        main {
+            margin-left: 0; /* Adjust margin for main content */
+            transition: margin-left 0.3s ease; /* Smooth transition for main content */
+            padding: 20px; /* Add padding for main content */
+        }
+
+        /* Button to toggle sidebar */
+        .toggle-button {
+            background-color: #182424;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 300; /* Ensure button is above other content */
+        }
+
+        /* Contact section styles */
+        .contact-section {
+            padding: 20px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px;
+                text-align: left; /* Align text to the left in sidebar */
+            }
+
+            nav ul {
+                gap: 0.5rem; /* Space between items */
+            }
+
+            nav a {
+                font-size: 1rem; /* Slightly smaller text on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                gap: 0.3rem; /* Space between items */
+            }
+
+            nav a {
+                font-size: 0.9rem; /* Smaller text for compact screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>TourManila</h1>
-        <nav>
-            <ul>|
-                <li><a href="index.html">Home</a></li>|
-                <li><a href="attractions.html">Attractions</a></li>|
-                <li><a href="about.html">About</a></li>|
-                <li><a href="contact.html">Contact</a></li>|
-            </ul>
-        </nav>
+        <button class="toggle-button">Menu</button> <!-- Button to toggle sidebar -->
     </header>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
     <main>
         <section class="contact-section">
@@ -44,7 +159,7 @@
             <div class="contact-info">
                 <p><i class="fas fa-envelope"></i> info@tourmanila.com</p>
                 <p><i class="fas fa-phone"></i> (123) 456-7890</p>
-                <p><i class="fas fa-map-marker-alt"></i> Manila ,Metro Manila, Philippines</p>
+                <p><i class="fas fa-map-marker-alt"></i> Manila, Metro Manila, Philippines</p>
             </div>
         </section>
     </main>
@@ -55,6 +170,13 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+        const sidebar = document.querySelector('nav.sidebar');
+        const toggleButton = document.querySelector('.toggle-button');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
